@@ -13,3 +13,5 @@ COMMANDS = {
   "show-birthday": {"show-birthday"},
   "birthdays": {"birthdays"},
 }
+
+FILE_DATA_PKL = "goit-pycore-hw-08/addressbook.pkl"

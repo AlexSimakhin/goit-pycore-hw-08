@@ -1,6 +1,7 @@
 from address_book import AddressBook
 from record import Record
 from constants import NOT_FOUND_MESSAGE, COMMANDS
+from data_storage import save_data, load_data
 
 def parse_input(user_input):
   cmd, *args = user_input.split()
@@ -95,7 +96,7 @@ def show_birthday(args, book: AddressBook):
 
 
 def main():
-  book = AddressBook()
+  book = load_data()
   print("Welcome to the assistant bot!")
   
   while True:
@@ -104,6 +105,7 @@ def main():
 
     match command:
       case cmd if cmd in COMMANDS["close"]:
+        save_data(book)
         print("Good bye!")
         break
       
