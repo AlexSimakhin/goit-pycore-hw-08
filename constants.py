@@ -1,3 +1,4 @@
+
 DATE_FORMAT = "%d.%m.%Y"
 
 NOT_FOUND_MESSAGE = "Contact does not exist, you can add it"
